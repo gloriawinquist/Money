@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eoQ-h1-jAc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="wie-Gm-q6c">
+            <objects>
+                <viewController id="eoQ-h1-jAc" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="Bsx-hd-FNW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="X00-ep-ZXE"/>
+                    </view>
+                    <connections>
+                        <segue destination="P2U-GJ-toz" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="VTF-K5-Obx"/>
+                        <segue destination="nxe-Vm-WSe" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="gyg-2l-O9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wbi-aO-Vto" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2535" y="-237"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="d1d-Z3-LeJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="nxe-Vm-WSe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDy-2r-3SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1605" y="50"/>
+        </scene>
+        <!--Goals-->
+        <scene sceneID="KAp-yv-CgV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Goals" id="VWV-Bk-ov7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ius-Ku-tHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-984" y="-898"/>
+        </scene>
+        <!--Budgets-->
+        <scene sceneID="Ktn-bL-ABZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Budgets" id="54k-Hd-BIJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXv-P7-efv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970" y="-800"/>
+        </scene>
+        <!--Transactions-->
+        <scene sceneID="bZk-d9-bp3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Transactions" id="bxW-ra-JVO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUw-yB-xrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-948" y="-712"/>
+        </scene>
+        <!--Accounts-->
+        <scene sceneID="eF2-fu-hTd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Accounts" id="m9g-zh-Cnh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zuy-zP-qyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-966" y="-618"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="UhQ-W7-6Hf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="BIP-lS-UfT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8d-el-Rfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970" y="-524"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="pny-bV-7eA">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewControllerId" id="P2U-GJ-toz" customClass="MenuViewController" customModule="Money" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="K9i-TV-NDA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WKV-Ro-sb1">
+                                <rect key="frame" x="0.0" y="328" width="375" height="339"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuTableViewCellId" rowHeight="40" id="ltF-g7-MHI" customClass="MenuTableViewCell" customModule="Money" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ltF-g7-MHI" id="xNT-H7-JDN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8W-g2-iaJ">
+                                                    <rect key="frame" x="100" y="5" width="265" height="30"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="r8W-g2-iaJ" secondAttribute="bottom" constant="5" id="JyG-Tz-QnV"/>
+                                            <constraint firstItem="r8W-g2-iaJ" firstAttribute="leading" secondItem="ltF-g7-MHI" secondAttribute="leading" constant="100" id="WPA-gK-d0d"/>
+                                            <constraint firstItem="r8W-g2-iaJ" firstAttribute="top" secondItem="ltF-g7-MHI" secondAttribute="top" constant="5" id="Z5U-gd-6np"/>
+                                            <constraint firstAttribute="trailing" secondItem="r8W-g2-iaJ" secondAttribute="trailing" constant="10" id="l4G-4c-Oad"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="r8W-g2-iaJ" id="fId-7G-vve"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="P2U-GJ-toz" id="dmf-6m-Kdr"/>
+                                    <outlet property="delegate" destination="P2U-GJ-toz" id="kSD-De-gGe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WKV-Ro-sb1" firstAttribute="leading" secondItem="aG1-Ot-oiA" secondAttribute="leading" id="71l-zJ-4ke"/>
+                            <constraint firstItem="WKV-Ro-sb1" firstAttribute="top" secondItem="aG1-Ot-oiA" secondAttribute="top" constant="308" id="RcG-Aw-DsJ"/>
+                            <constraint firstItem="aG1-Ot-oiA" firstAttribute="trailing" secondItem="WKV-Ro-sb1" secondAttribute="trailing" id="bij-Dr-b4y"/>
+                            <constraint firstItem="aG1-Ot-oiA" firstAttribute="bottom" secondItem="WKV-Ro-sb1" secondAttribute="bottom" id="stu-Hf-Te9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aG1-Ot-oiA"/>
+                    </view>
+                    <connections>
+                        <outlet property="theTableView" destination="WKV-Ro-sb1" id="JaD-8f-g2S"/>
+                        <segue destination="54k-Hd-BIJ" kind="custom" identifier="showBudgetsSegue" customClass="SWRevealViewControllerSeguePushController" id="g8Q-aT-vf4"/>
+                        <segue destination="bxW-ra-JVO" kind="custom" identifier="showTransactionsSegue" customClass="SWRevealViewControllerSeguePushController" id="EIq-bd-Law"/>
+                        <segue destination="m9g-zh-Cnh" kind="custom" identifier="showAccountsSegue" customClass="SWRevealViewControllerSeguePushController" id="vul-eI-a12"/>
+                        <segue destination="BIP-lS-UfT" kind="custom" identifier="showSettingsSegue" customClass="SWRevealViewControllerSeguePushController" id="xve-mz-Xyo"/>
+                        <segue destination="VWV-Bk-ov7" kind="custom" identifier="showGoalsSegue" customClass="SWRevealViewControllerSeguePushController" id="Ltu-bT-Fnc"/>
+                        <segue destination="nxe-Vm-WSe" kind="custom" identifier="showHomeSegue" customClass="SWRevealViewControllerSeguePushController" id="e4u-pz-bFM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPr-I3-h66" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1620" y="-643"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e4u-pz-bFM"/>
+    </inferredMetricsTieBreakers>
+</document>

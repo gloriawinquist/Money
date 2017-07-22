@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13196.5" systemVersion="16G18a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="accountId" attributeType="String" syncable="YES"/>
+        <attribute name="balance" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="credits" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="toAccount" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="debits" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="fromAccount" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Budget" representedClassName="Budget" syncable="YES">
+        <attribute name="budgetId" attributeType="String" syncable="YES"/>
+        <attribute name="budgetType" attributeType="String" syncable="YES"/>
+        <attribute name="usedUp" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="yearlyAllowance" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="budget" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
+        <attribute name="goalDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="goalId" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="saved" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="total" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="transactionId" attributeType="String" syncable="YES"/>
+        <relationship name="budget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Budget" inverseName="transactions" inverseEntity="Budget" syncable="YES"/>
+        <relationship name="fromAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="debits" inverseEntity="Account" syncable="YES"/>
+        <relationship name="toAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="credits" inverseEntity="Account" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Budget" positionX="0" positionY="81" width="128" height="120"/>
+        <element name="Goal" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="Account" positionX="9" positionY="99" width="128" height="120"/>
+        <element name="Transaction" positionX="0" positionY="90" width="128" height="150"/>
+    </elements>
 </model>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EfA-As-hVq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transactions-->
+        <scene sceneID="cZu-t7-KsI">
+            <objects>
+                <viewController id="LzB-6Y-4W3" customClass="TransactionsViewController" customModule="Money" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="B5s-ml-8xA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="5U7-KP-S3y"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transactions" id="I1K-1Z-wZh">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Qub-Sk-FRM"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="Qub-Sk-FRM" id="HaY-V3-MjT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVb-uR-tP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="167.76611694152925"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y0R-mP-uxc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EfA-As-hVq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nwR-Gp-SGa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LzB-6Y-4W3" kind="relationship" relationship="rootViewController" id="yDv-P5-3wo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afd-Gh-I7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="168"/>
+        </scene>
+    </scenes>
+</document>
